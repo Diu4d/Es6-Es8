@@ -1,0 +1,31 @@
+``可以直接进行字符串拼接,并且可以手动换行
+变量拼接
+let lovest = '123'
+let out = `${lovest}是个数字`；
+console.log(out);
+//123是个数字
+
+ES6允许在大括号里面，直接写入变量和函数，作为对象的属性和方法.
+let name = '123';
+let change = function() {
+console.log('456');
+}
+const school = {
+name,
+change,
+improve(){
+console.log('789')
+}}
+
+箭头函数的this无法被改变
+箭头函数不能作为构造实例化对象
+箭头函数不能使用arguments变量
+箭头函数可以省略小括号，当形参有且只有一个的时候
+let add = (n) => {
+return n + n;
+}
+
+rest 参数必须要放到参数最后
+rest 表达语法...+参数名称
+扩展运算符可以合并数组及伪数组
+

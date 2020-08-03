@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let game = {
+      name:'俄罗斯方块'
+    };
+    let methods = {
+      up: Symbol(),
+      down:Symbol()
+    };
+
+    game[methods.up] = function() {
+      console.log('111');
+    }
+
+    game[methods.down] = function() {
+      console.log('222');
+    }
+    console.log(game);
+  </script>
+</body>
+</html>

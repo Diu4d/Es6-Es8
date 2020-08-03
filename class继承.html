@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class phone{
+      constructor(brand, price){
+        this.brand = brand;
+        this.price = price;
+      }
+      //父类的成员属性
+      call(){
+        console.log('我可以打电话');
+      }
+    }
+
+    class smartphone extends phone {
+      constructor(brand,price,color,size){
+        //phone.call(this, brand, price)
+        super(brand, price);
+        this.color = color;
+        this.size = size;
+      }
+      phone(){
+        console.log('拍照');
+      }
+      playgame(){
+        console.log('玩游戏')
+      }
+    }
+
+    const xiaomi = new smartphone('小米',799,'黑色','4.7inch');
+    console.log(xiaomi);
+    xiaomi.call();
+    xiaomi.phone();
+    xiaomi.playgame();
+  </script>
+</body>
+</html>

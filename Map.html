@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let m = new Map();
+
+    m.set('name','111');
+    m.set('change',function(){
+      console.log('222');
+    });
+
+    let key = {
+      school: '333'
+    };
+
+    m.set(key,['aaa','bbb','ccc']);
+
+    console.log(m.size);
+    console.log(m);
+
+    // 刪除
+    m.delete('name');
+
+    // 获取
+    console.log(m.get('change'));
+    console.log(m.get(key));
+
+    // 清空
+    m.clear();
+
+    // 遍历
+    for(let v of m){
+      console.log(v);
+    }
+  </script>
+</body>
+</html>
